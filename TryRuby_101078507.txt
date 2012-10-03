@@ -1,0 +1,77 @@
+﻿-string+reverse
+	"Jimmy".reverse
+-string+length
+	"Jimmy".length
+-print string 
+	"s"*5-->"sssss"
+	5.times { print "Odelay!" } => "Odelay!Odelay!Odelay!Odelay!Odelay!"
+-plus
+	books.valu­es.each{|r­ate| ratin­gs[rate]+=­1}
+-reverse number
+	40.to_s.reverse
+-reverse line 
+	poem.lines.to_a.reverse
+-find array max
+	[12, 47, 35].max
+-New Array
+	ticket = [12, 47, 35]
+
+-object
+	books = {}
+	books["Gravity's Rainbow"] = :splendid
+	books.values.each { |rate| ratings[rate] += 1 }.
+
+-Hash
+	ratings = Hash.new(0)
+	Hash.new
+-Dir
+	Dir.entries "/"
+	Dir["/*.txt"]
+-File
+	print File.read("/comics.txt")
+	FileUtils.cp('/comics.txt', '/Home/comics.txt')
+	File.open("/Home/comics.txt", "a") do |f|
+	File.mtime("/Home/comics.txt")
+	File.mtime("/Home/comics.txt").hour
+-methods 
+	 def load_comics( path )
+-Popup
+	require 'popup'
+	Popup.goto "http://ruby-lang.org"
+
+	Popup.make {
+ 		 h1 "My Links"
+ 		 link "Go to Ruby", "http://ruby-lang.org/"
+		}
+
+	Popup.make do
+ 		 h1 "Things To Do"
+ 		 list do
+ 		   p "Try out Ruby"
+  		  p "Ride a tiger"
+  		  p "(down River Euphrates)"
+ 		 end
+	end
+
+-Class
+	 class BlogEntry
+
+	entry = BlogEntry.new
+	entry.title = "Today Mt. Hood Was Stolen!"
+
+	class BlogEntry
+  		def initialize( title, mood, fulltext )
+   		@time = Time.now
+    		@title, @mood, @fulltext = title, mood, fulltext
+  		end
+	end
+
+-blog
+	blog.map { |entry| entry.mood }
+
+	blog.each do |entry|
+  		h2 entry.title
+  		p entry.fulltext
+	end
+
+

@@ -4,6 +4,14 @@ resources :movies
 root :to => redirect('/movies')
 
 
+    # add to routes.rb, just before or just after 'resources :movies' :
+    # Route that posts 'Search TMDb' form
+    post '/movies/search_tmdb'
+
+#-------mark by katrina 2012/12/06 (ch 7.2)
+#match 'auth/:provider/callback' => 'sessions#create',:as => 'login'
+#match 'logout' => 'sessions#destroy'
+#-------mark by katrina 2012/12/06 (ch 7.2) end
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
@@ -58,7 +66,10 @@ root :to => redirect('/movies')
 
   # See how all your routes lay out with "rake routes"
 
+
   # This is a legacy wild controller route that's not recommended for RESTful applications.
   # Note: This route will make all actions in every controller accessible via GET requests.
   # match ':controller(/:action(/:id(.:format)))'
+
+
 end

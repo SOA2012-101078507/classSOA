@@ -1,5 +1,14 @@
-%h2 All Movies
- 
+-# ------mark by katrina 2012/12/06 (ch 7.2)
+#login
+#  - if @current_user
+#    %p.welcome  Welcome, #{@current_user.name}!
+#    = link_to 'Log Out', logout_path
+#  - else
+#    %p.login= link_to 'Log in with your Twitter account', login_path
+
+-# %h2 All Movies
+-# ------mark by katrina 2012/12/06 end
+
 %table#movies
   %thead
     %tr
@@ -14,3 +23,19 @@
         %td= movie.rating
         %td= movie.release_date
         %td= link_to "More about #{movie.title}", movie_path(movie)
+
+
+    -# add to end of index.html.haml 
+    = link_to 'Add new movie', new_movie_path
+
+
+    -# add to end of app/views/movies/index.html.haml:
+     
+    %h1 Search TMDb for a movie
+    = form_tag :action => 'search_tmdb' do
+
+      %label{:for => 'search_terms'} Search Terms
+      = text_field_tag 'search_terms'
+      = submit_tag 'Search TMDb'
+
+

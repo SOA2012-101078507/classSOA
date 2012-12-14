@@ -5,6 +5,20 @@
     = stylesheet_link_tag 'application'
     = javascript_include_tag 'application'
     = csrf_meta_tags
-
+ 
   %body
     = yield
+    -# this goes just inside %body:
+    - if flash[:notice]
+      #notice.message= flash[:notice]
+    - elsif flash[:warning]
+      #warning.message= flash[:warning]
+
+
+-# A single row of the All Movies table
+%tr
+  %td= movie.title
+  %td= movie.rating
+  %td= movie.release_date
+  %td= link_to "More about #{movie.title}", movie_path(movie)
+

@@ -1,0 +1,14 @@
+
+# Edit app/models/moviegoer.rb to look like this:
+class Moviegoer < ActiveRecord::Base
+#-------mark by katrina 2012/12/06 (ch 7.2)
+ # include ActiveModel::MassAssignmentSecurity
+ # attr_protected :uid, :provider, :name # see text for explanation
+ # def self.create_with_omniauth(auth)
+ #   Moviegoer.create!(
+ #     :provider => auth["provider"],
+ #     :uid => auth["uid"],
+ #     :name => auth["info"]["name"])
+ # end
+#-------mark by katrina 2012/12/06 (ch 7.2) end
+end

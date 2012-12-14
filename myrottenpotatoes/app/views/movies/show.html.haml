@@ -2,7 +2,8 @@
 
 %ul#details
 	%li
-	Rating:= @movie.rating
+	Rating:
+	= @movie.rating
 	%li
 	Released on:
 	= @movie.release_date.strftime("%B %d, %Y")
